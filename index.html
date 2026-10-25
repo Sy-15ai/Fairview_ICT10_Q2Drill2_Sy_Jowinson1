@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ICT Club Membership</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+<script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    </script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eef3f8;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            width: 400px;
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .icon {
+            width: 55px;
+            height: 55px;
+            background: #315efb;
+            color: white;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            margin: 0;
+            color: #17233c;
+            font-size: 27px;
+        }
+
+        .description {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            font-size: 13px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 16px;
+            border: 1px solid #d5dbe5;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #315efb;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            background: #315efb;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #244bd0;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f3f6fa;
+            border-radius: 8px;
+            color: #333;
+            font-size: 14px;
+            min-height: 50px;
+        }
+
+        .bottom-text {
+            text-align: center;
+            color: #999;
+            font-size: 11px;
+            margin-top: 20px;
+        }
+    </style>
+</head> 
+
+<body>
+
+    <div class="card">
+
+        <div class="icon">ICT</div>
+
+        <h1>Club Membership</h1>
+
+        <p class="description">
+            Enter your name below to check your ICT Club membership.
+        </p>
+
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" placeholder="Enter your first name">
+
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" placeholder="Enter your last name">
+
+        <button py-click="check_member">
+            Check Membership
+        </button>
+
+        <div id="result">
+            Your membership result will appear here.
+        </div>
+
+        <div class="bottom-text">
+            ICT Club Membership System
+        </div>
+
+    </div>
+
+    <py-script src="./main.py"></py-script>
+
+</body>
+
+</html>
